@@ -52,9 +52,9 @@ module alu
             NOR:
                 result = ~(num1 | num2);
             SRL:
-                result = num1 + num2;           // TODO
+                result = num1 >> 1;
             SRA:
-                result = num1 + num2;           // TODO
+                result = num1 >>> 1;
             default:
                 result = num1 + num2;           // Sum by default
         endcase
