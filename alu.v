@@ -1,5 +1,5 @@
 /*
-Title: ALU implemented in Verilog for FPGA
+Title: Basic ALU implemented in Verilog for FPGA
 Authors: Bonino, Francisco Ignacio;
          Luna, Lihué Leandro
 */
@@ -24,17 +24,17 @@ module alu
                                  num2,
         input [OPCODE_SIZE - 1 : 0] opcode,
     
-        output [BUS_SIZE - 1 : 0] ALU_out,
+        output [BUS_SIZE - 1 : 0] out,
         output carry
     );
 
     reg [BUS_SIZE - 1 : 0] result;              // 8-bits operation result
-    reg carry;
     
     wire [BUS_SIZE : 0] aux;                    // 9-bits auxiliar variable
 
     assign aux = {1'b0, num1} + {1'b0, num2};
     assign carry = aux[BUS_SIZE];
+    assign out = result;
 
     always @(*)
     begin: OPCODE_SWITCH
