@@ -28,8 +28,13 @@ module alu
         output carry
     );
 
-    reg [BUS_SIZE : 0] result;                  // 9-bits operation result
+    reg [BUS_SIZE - 1 : 0] result;              // 8-bits operation result
     reg carry;
+    
+    wire [BUS_SIZE : 0] aux;                    // 9-bits auxiliar variable
+
+    assign aux = {1'b0, num1} + {1'b0, num2};
+    assign carry = aux[BUS_SIZE];
 
     always @(*)
     begin: OPCODE_SWITCH
