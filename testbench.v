@@ -23,7 +23,6 @@ module test;
         num1 = 8'h1;
         num2 = 8'h2;
         opcode = 6'b100100;
-        #20;
         $finish;
     end
 
