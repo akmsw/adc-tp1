@@ -37,9 +37,9 @@ module alu
   begin
     if (i_boton1)
       datoA <= i_swiches;
-    else if (i_boton2)
+    if (i_boton2)
       datoB <= i_swiches;
-    else if (i_boton3)
+    if (i_boton3)
       opcode <= i_swiches;
   end
 

@@ -30,7 +30,7 @@ begin
   $dumpvars;
 
   #0
-  i_swiches = 9'd0;
+  i_swiches = 8'd0;
   i_boton1 = 1'b0;
   i_boton2 = 1'b0;
   i_boton3 = 1'b0;
@@ -38,12 +38,12 @@ begin
 
   // ADD
   #1
-  i_swiches = 9'd255;
+  i_swiches = 8'd255;
   i_boton1 = 1'b1;
   #1
   i_boton1 = 1'b0;
   #1
-  i_swiches = 9'd2;
+  i_swiches = 8'd2;
   i_boton2 = 1'b1;
   #1
   i_boton2 = 1'b0;
@@ -55,12 +55,12 @@ begin
 
   // SUB
   #1
-  i_swiches = 9'd10;
+  i_swiches = 8'd10;
   i_boton1 = 1'b1;
   #1
   i_boton1 = 1'b0;
   #1
-  i_swiches = 9'd4;
+  i_swiches = 8'd4;
   i_boton2 = 1'b1;
   #1
   i_boton2 = 1'b0;
@@ -72,21 +72,21 @@ begin
 
   // AND
   #1
-  i_swiches = 9'b00110111;
+  i_swiches = 8'd35;
   i_boton1 = 1'b1;
   #1
   i_boton1 = 1'b0;
   #1
-  i_swiches = 9'b01100101;
+  i_swiches = 8'd12;
   i_boton2 = 1'b1;
   #1
   i_boton2 = 1'b0;
   #1
-  i_swiches = AND;
+  i_swiches = XOR;
   i_boton3 = 1'b1;
   #1
   i_boton3 = 1'b0;
-  #100
+  #1
   $finish;
 end
 
