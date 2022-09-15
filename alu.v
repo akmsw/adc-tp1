@@ -1,7 +1,7 @@
 module alu
   #(
     parameter OPCODE_SIZE = 6,              // 6-bits operation codes
-    parameter BUS_SIZE = 8                 // 8-bits input/output bus
+    parameter BUS_SIZE = 8                  // 8-bits input/output bus
   )
   (
     input wire i_clock,
@@ -32,6 +32,7 @@ module alu
   assign o_carry = result[BUS_SIZE];
   assign o_ALUout = result;
 
+  // Button check
   always @(posedge i_clock)
   begin
     if (i_boton1)
@@ -42,6 +43,7 @@ module alu
       opcode <= i_swiches;
   end
 
+  // Combinational logic
   always @(*)
   begin
     case (opcode)
