@@ -70,7 +70,7 @@ begin
   #1
   i_boton3 = 1'b0;
 
-  // AND
+  // XOR
   #1
   i_swiches = 8'd35;
   i_boton1 = 1'b1;
