@@ -99,12 +99,12 @@ end
 alu #()
 alu_instance
 (
-  .o_ALUout ( o_ALUout ),
-  .i_clock ( i_clock ),
-  .i_boton1 ( i_boton1 ),
-  .i_boton2 ( i_boton2 ),
-  .i_boton3 ( i_boton3 ),
-  .i_swiches ( i_swiches ),
+  .o_ALUout(o_ALUout),
+  .i_clock(i_clock),
+  .i_boton1(i_boton1),
+  .i_boton2(i_boton2),
+  .i_boton3(i_boton3),
+  .i_swiches(i_swiches),
   .o_carry(carry)
 );
 
